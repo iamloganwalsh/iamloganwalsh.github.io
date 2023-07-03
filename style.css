@@ -1,7 +1,96 @@
-title {
-    width: 100px;
-    height: 50px;
-    padding: 20px;
-    border: 1px solid;
-    color: blue
-  }
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700; 
+  color: black;
+}
+
+a:hover {
+  color: rgb(184, 159, 218);
+}
+
+#name {
+  font-size: 2.5rem;
+}
+
+nav {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page_nav a{
+  display: inline;
+  margin-left: 2rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0.938rem;
+}
+
+#introduction {
+  display: block;
+  text-align: left;
+  margin-left: 25rem;
+  margin-top: 12.5rem;
+  width: 31.25rem;
+  font-size: 1.8rem;
+}
+
+#introduction h3{
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+#introduction p{
+  font-weight: lighter;
+}
+
+#socials {
+  display: flex;
+  margin-left: 25rem;
+}
+
+#techstack {
+  display: flex;
+  margin-left: 25rem;
+}
+
+#techstack h3{
+  margin-right: 1.25rem;
+}
+
+#techstack p{
+  margin-right: 1.25rem;
+}
+
+#home {
+  margin-bottom: 26rem;
+}
+
+#about {
+  margin-left: 25rem;
+  text-align: left;
+  display: top;
+  width: 26.25rem;
+}
+
+header{
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  border-bottom: solid; 
+  border-width: 1px;
+}
