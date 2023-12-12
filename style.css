@@ -2,6 +2,18 @@ html {
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
+  
+}
+
+header{
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  font-size: 150%;
 }
 
 a {
@@ -12,10 +24,6 @@ a {
 
 a:hover {
   color: rgb(184, 159, 218);
-}
-
-#name {
-  font-size: 2.5rem;
 }
 
 nav {
@@ -30,6 +38,10 @@ nav {
   margin-left: 2rem;
 }
 
+section {
+  scroll-margin-top: 12.5rem;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   padding: 0.938rem;
@@ -38,8 +50,6 @@ body {
 #introduction {
   display: block;
   text-align: left;
-  margin-left: 25rem;
-  margin-top: 12.5rem;
   width: 31.25rem;
   font-size: 1.8rem;
 }
@@ -50,47 +60,73 @@ body {
   text-align: left;
 }
 
-#introduction p{
-  font-weight: lighter;
-}
-
 #socials {
   display: flex;
-  margin-left: 25rem;
 }
 
 #techstack {
   display: flex;
-  margin-left: 25rem;
 }
 
-#techstack h3{
+#techstack p, h3 {
   margin-right: 1.25rem;
 }
 
-#techstack p{
-  margin-right: 1.25rem;
-}
-
-#home {
-  margin-bottom: 26rem;
+#intro_section {
+  margin-top: 12.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
 #about {
-  margin-left: 25rem;
-  text-align: left;
+  margin-top: 400px;
   display: top;
-  width: 26.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 80rem;
 }
 
-header{
-  background-color: white;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 7px;
-  border-bottom: solid; 
-  border-width: 1px;
+#projects_header {
+  margin-top: 550px;
+  display: top;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 45%;
+  margin-bottom: 100px;
+}
+
+
+#projects {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  text-align: left;
+  width: 55%;
+  margin-bottom: 500px;
+}
+
+#projects img{
+  margin-top: 15px;
+}
+
+.project{
+  display: top;
+}
+
+#projects h3 {
+  font-size: 1.4rem;
+}
+
+#contact {
+  font-size: 1.4rem;
+  display: top;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
