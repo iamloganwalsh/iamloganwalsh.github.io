@@ -96,7 +96,7 @@ body {
   margin-right: auto;
   font-size: 1.4rem;
   text-align: center;
-  width: 45%;
+  width: 55%;
   margin-bottom: 100px;
 }
 
@@ -107,8 +107,7 @@ body {
   margin-right: auto;
   font-size: 1.4rem;
   text-align: left;
-  width: 55%;
-  margin-bottom: 500px;
+  width: 65%;
 }
 
 #projects img{
@@ -117,6 +116,7 @@ body {
 
 .project{
   display: top;
+  margin-bottom: 100px;
 }
 
 #projects h3 {
