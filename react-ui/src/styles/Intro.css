@@ -1,0 +1,20 @@
+#Intro {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+
+.IntroDivLeft {
+    
+}
+
+.IntroDivRight {
+
+}
+
+.IntroDivRight img {
+    width: 25rem;
+    height: 25rem;
+    clip-path: circle();
+}

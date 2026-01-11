@@ -1,0 +1,25 @@
+.NavbarHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+}
+
+.NavbarController {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    font-size: 150%;
+    padding-bottom: 7px;
+}
+
+/* .NavbarLeft {
+
+} */
+
+.NavbarRight a{
+    display: inline;
+    margin-left: 2rem;
+}
