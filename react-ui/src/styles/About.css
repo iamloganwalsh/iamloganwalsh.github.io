@@ -1,0 +1,15 @@
+#About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#About p {
+    width: 60vw;
+}
+
+#About h2 {
+    margin: 0;
+}

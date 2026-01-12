@@ -1,8 +1,5 @@
 #Intro {
-    display: flex;
-    justify-content: center;
     gap: 100px;
-    align-items: center;
 }
 
 .IntroDivLeft {
@@ -18,10 +15,6 @@
 .IntroDivLeft h1 {
     margin: 8px 0px;
     color: rgb(88, 88, 88);
-}
-
-.IntroDivRight {
-
 }
 
 .IntroDivRight img {
