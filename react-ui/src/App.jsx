@@ -2,6 +2,7 @@ import './App.css'
 import { Navbar } from './components/Navbar'
 import { Intro } from './components/Intro'
 import { About } from './components/About'
+import { Projects } from './components/Projects'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Intro />
       <About />
+      <Projects />
     </>
   )
 }
