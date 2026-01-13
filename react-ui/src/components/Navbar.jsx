@@ -12,8 +12,8 @@ export const Navbar = () => {
 
                 <div className="NavbarRight">
                     <a href="#About" onClick="smoothScroll('About')">About</a>
-                    <a href="./index.html#projects_header" onClick="smoothScroll('projects_header')">Projects</a>
-                    <a href="./index.html#contact" onClick="smoothScroll('contact')">Contact</a>
+                    <a href="#Projects" onClick="smoothScroll('Projects')">Projects</a>
+                    <a href="#Contact" onClick="smoothScroll('Contact')">Contact</a>
                 </div>
             </div>
         </header>

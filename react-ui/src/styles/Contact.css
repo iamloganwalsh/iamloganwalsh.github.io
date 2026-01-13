@@ -1,0 +1,144 @@
+#Contact {
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.ContactLeft {
+    min-width: 250px;
+    height: 275px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.ContactLeft h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.ContactLeft p {
+    font-size: 1rem;
+    color: #333;
+    margin-left: 8px;
+}
+
+.ContactInfoLine img {
+    width: 1rem;
+}
+
+.ContactInfoLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ContactRight {
+    min-width: 300px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(54,54,54);
+    padding: 20px;
+    color: white;
+    width: 40%;
+}
+
+.ContactRight p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.ContactRight form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ContactRight input,
+.ContactRight textarea {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px 5px;
+    font-size: 1rem;
+    background: transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    color: white;
+}
+
+.ContactRight input:focus,
+.ContactRight textarea:focus {
+    outline: none;
+    border-bottom-color: #007bff;
+    box-shadow: 0 2px 0 #007bff;
+}
+
+.ContactRight textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.ContactRight button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ContactRight button:hover {
+    background-color: #0056b3;
+}
+
+.ContactRight button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.ContactRight .success {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.ContactRight .error {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    #Contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .ContactRight,
+    .ContactLeft {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.FormNameEmail {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#FormNameEmailName {
+    width: 30%
+}
+
+#FormNameEmailEmail {
+    width: 65%
+}
