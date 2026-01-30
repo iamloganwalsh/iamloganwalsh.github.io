@@ -92,6 +92,11 @@ export const Contact = () => {
                     <p> Auckland, New Zealand</p>
                 </div>
 
+                <div className="IntroLargeButtons">
+                  <a className="IntroBtn" href="mailto:loganwalshnz@gmail.com">Email me directly</a>
+                </div>
+                
+
             </div>
 
             <div className="ContactRight">

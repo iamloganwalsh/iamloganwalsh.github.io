@@ -17,7 +17,7 @@ export const Intro = () => {
 
                 <div className="IntroLargeButtons">
                     <a href={resume} target="_blank" className="IntroBtn">View Resume</a>
-                    <a href="#" className="IntroBtn" style={{backgroundColor: "rgb(54, 54, 54)", color: "white"}}>Contact Me</a>
+                    <a href="#Contact" className="IntroBtn" style={{backgroundColor: "rgb(54, 54, 54)", color: "white"}}>Contact Me</a>
                 </div>
 
                 <div className="IntroSocials">
