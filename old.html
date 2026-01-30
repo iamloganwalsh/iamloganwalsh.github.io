@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <title>Home</title>
+        
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="./index.html#intro_section" onClick="smoothScroll('intro_section')">Logan Walsh</a>
+                <div id="page_nav">
+                    <a href="./index.html#about" onClick="smoothScroll('about')">About</a>
+                    <a href="./index.html#projects_header" onClick="smoothScroll('projects_header')">Projects</a>
+                    <a href="./index.html#contact" onClick="smoothScroll('contact')">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <section id="intro_section">
+            <div id="left_section">
+                <div id="introduction">
+                    <h3>Software Developer</h3>
+                    <p>Hi, I'm Logan Walsh. A passionate Software Developer currently based in Auckland, New Zealand.<p>
+                </div>
+
+                <div id="socials">
+                    <p><a href="https://www.linkedin.com/in/logan-walsh-516503258/" target="_blank"><img src="images/linkedin.png" style="width:3rem;height:3rem;"></a></p>
+                    <p><a href="https://github.com/iamloganwalsh" target="_blank"><img src="images/github.png" style="width:3rem;height:3rem;"></a></p>
+                </div>
+                
+                <div id="techstack">
+                    <h3>Experience with</h3>
+                    <p><a href="https://www.python.org" target="_blank_"><img src="images/python.jpg" style="width:2rem;height:2rem;"></a></p>
+                    <p><a href="https://en.wikipedia.org/wiki/HTML" target="_blank_"><img src="images/HTML5.jpg" style="width:2rem;height:2rem;"></a></p>
+                    <p><a href="https://en.wikipedia.org/wiki/CSS" target="_blank_"><img src="images/CSS3.jpg" style="width:2rem;height:2rem;"></a></p>
+                </div>
+            </div>
+
+            <div>
+                <img id="profile_picture" src="images\temporary_picture.png" style="width:25rem;height:25rem;">
+            </div>
+
+        </section>
+
+        <section id="about">
+            <h3>About Me</h3>
+            <p>
+                I'm a computer science student with a love for coding and problem solving, currently studying at the University of Auckland. 
+                Initially enrolling in a Bachelor of Engineering, I discovered a love for software development thanks to a general software engineering paper,
+                where I made the decision to pivot to computer science. I'm always looking to develop my skills as a software developer and come up with new solutions
+                to existing problems. Through studying and work experiences, I hope to learn fundamental skills which I can apply to real world problems.
+                I am excited to join the coding workforce and get first hand experience, allowing me to become better at something I love.
+            </p>
+        </section>
+
+
+        <section id="projects_header">
+            <a href="https://github.com/iamloganwalsh" target="_blank_">
+                <h3>Projects</h3>
+            </a>
+            <p>
+                Github repositories are accessible either by clicking on the "Projects" title above or by clicking 
+                on the name of the desired project
+            </p>
+        </section>
+
+        <section id="projects">
+
+            <div class="project">
+                <a href="https://github.com/iamloganwalsh/risk-v-emulator/tree/main", target="_blank_">
+                    <h3>Risc-V Emulator</h3>
+                </a>
+                <p>
+                    This virtual machine uses a 32-bit instruction set based off of the RV321 Instruction Architecture.
+                    The emulator is coded in C and can run 33 instructions, including arithmetic, logical, memory access and program flow operations.
+                </p> 
+
+            </div>
+            <img id="risc-v-logo" src="images/RISC-V-logo.png" style="width:10rem;height:10rem;padding-left:3rem;">
+        </section>
+
+
+        <section id="projects">
+
+            <img id="boulder-break-logo" src="images/boulderbreak.png" style="width:15rem;height:10rem;padding-right:3rem;">
+            <div class="project">
+                <a href="https://github.com/iamloganwalsh/boulder_break_uni", target="_blank_">
+                    <h3>Boulder Break Game (University)</h3>
+                </a>
+                <p>
+                    This simple, text-based game was created for an assignment during my short time in Engineering.
+                    This game is coded in C and contains bug-prevention code and a rotating view feature.
+                </p>
+            </div>
+            
+        </section>
+
+        <div style="margin-bottom: 500px;"></div>
+
+        <section id="contact">
+            <h3>Get in touch!</h3>
+            <p>loganwalshnz@gmail.com</p>
+            <p>+64 275 926 303</p>
+        </section>
+
+    </body>  
+</html>
