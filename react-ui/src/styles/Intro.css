@@ -59,10 +59,6 @@
     width: 2rem;
 }
 
-/* ============================================
-   MOBILE RESPONSIVE STYLES
-   ============================================ */
-
 @media (max-width: 768px) {
     #Intro {
         flex-direction: column-reverse;

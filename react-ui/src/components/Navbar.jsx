@@ -32,6 +32,7 @@ export const Navbar = () => {
                 </button>
 
                 <div className={`NavbarRight ${isMenuOpen ? 'active' : ''}`}>
+                    <a href="#Intro" onClick={closeMenu} className="MobileOnly">Logan Walsh</a>
                     <a href="#About" onClick={closeMenu}>About</a>
                     <a href="#Projects" onClick={closeMenu}>Projects</a>
                     <a href="#Contact" onClick={closeMenu}>Contact</a>

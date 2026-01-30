@@ -14,12 +14,27 @@
     font-size: 150%;
 }
 
+.NavbarLeft a,
+.NavbarRight a {
+    background-color: white;
+}
+
+.NavbarLeft a,
+.NavbarRight a {
+    background-color: white;
+}
+
 .NavbarRight a {
     display: inline;
     margin-left: 2rem;
 }
 
-/* Hamburger Button - Hidden on Desktop */
+/* Hide the Logan Walsh link in NavbarRight on desktop */
+.NavbarRight a.MobileOnly {
+    display: none;
+}
+
+/* Hamburger Button - Hidden off Mobile */
 .HamburgerButton {
     display: none;
     flex-direction: column;
@@ -59,19 +74,25 @@
     display: none;
 }
 
-/* ============================================
-   MOBILE RESPONSIVE STYLES
-   ============================================ */
-
 @media (max-width: 768px) {
     .NavbarController {
         padding: 15px 20px;
         font-size: 120%;
+        justify-content: flex-end;
+    }
+
+    /* Hide Logan Walsh name on mobile */
+    .NavbarLeft {
+        display: none;
     }
 
     /* Show hamburger button on mobile */
     .HamburgerButton {
         display: flex;
+    }
+
+    .NavbarRight a.MobileOnly {
+        display: block;
     }
 
     /* Mobile Navigation Menu */
@@ -107,7 +128,6 @@
         background-color: #f8f8f8;
     }
 
-    /* Show overlay when menu is open */
     .MenuOverlay {
         display: block;
         position: fixed;

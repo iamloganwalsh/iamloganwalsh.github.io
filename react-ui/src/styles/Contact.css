@@ -9,7 +9,6 @@
 
 .ContactLeft {
     min-width: 250px;
-    height: 275px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -141,4 +140,17 @@
 
 #FormNameEmailEmail {
     width: 55%
+}
+
+@media (min-width: 769px) {
+    .ContactLeft {
+        height: 275px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ContactLeft {
+        width: 100%;
+        align-items: center;
+    }
 }

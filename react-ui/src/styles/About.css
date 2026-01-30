@@ -14,10 +14,6 @@
     margin: 0;
 }
 
-/* ============================================
-   MOBILE RESPONSIVE STYLES
-   ============================================ */
-
 @media (max-width: 768px) {
     #About {
         font-size: 1.1rem;
