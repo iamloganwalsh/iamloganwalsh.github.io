@@ -13,7 +13,6 @@
 .ProjectCard {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-radius: 5%;
     width: 20rem;
@@ -22,7 +21,7 @@
 }
 
 .PCMediaWrapper {
-    padding: 5% 5% 0 5%;
+    padding: 16px 16px 0 16px;
 }
 
 .ProjectCard img,
@@ -34,9 +33,54 @@
 
 .ProjectCard h2 {
     margin: 0;
+    padding: 0px 16px;
+    text-align: center;
 }
 
 .ProjectCard p {
     padding: 0 10px 10px 10px;
     text-align: center;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+    #Projects {
+        padding: 40px 20px;
+    }
+
+    #Projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .FeaturedProjectsController {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .ProjectCard {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .ProjectCard {
+        max-width: 350px;
+    }
+
+    .ProjectCard h2 {
+        font-size: 1.3rem;
+    }
+
+    .ProjectCard p {
+        font-size: 0.95rem;
+    }
 }

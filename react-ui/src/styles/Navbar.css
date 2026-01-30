@@ -2,7 +2,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* background-color: white; */
     width: 100%;
     z-index: 1000;
 }
@@ -10,20 +9,113 @@
 .NavbarController {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 10px 7px 10px;
     font-size: 150%;
 }
 
-/* .NavbarLeft {
-
-} */
-
-.NavbarRight a{
+.NavbarRight a {
     display: inline;
     margin-left: 2rem;
 }
 
-.NavbarLeft a,
-.NavbarRight a {
-    background-color: white;
+/* Hamburger Button - Hidden on Desktop */
+.HamburgerButton {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.HamburgerButton span {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.HamburgerButton.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.HamburgerButton.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.HamburgerButton.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Overlay for mobile menu */
+.MenuOverlay {
+    display: none;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .NavbarController {
+        padding: 15px 20px;
+        font-size: 120%;
+    }
+
+    /* Show hamburger button on mobile */
+    .HamburgerButton {
+        display: flex;
+    }
+
+    /* Mobile Navigation Menu */
+    .NavbarRight {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .NavbarRight.active {
+        right: 0;
+    }
+
+    .NavbarRight a {
+        display: block;
+        margin: 0;
+        padding: 20px 30px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 1.1rem;
+    }
+
+    .NavbarRight a:hover {
+        background-color: #f8f8f8;
+    }
+
+    /* Show overlay when menu is open */
+    .MenuOverlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
 }

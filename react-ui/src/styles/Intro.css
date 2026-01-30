@@ -58,3 +58,58 @@
 .IntroSocials img {
     width: 2rem;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+    #Intro {
+        flex-direction: column-reverse;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .IntroDivRight img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .IntroDivLeft h1 {
+        font-size: 1.8rem;
+    }
+
+    .IntroDivLeft h2 {
+        font-size: 1.3rem;
+    }
+
+    .IntroDivLeft p {
+        font-size: 0.95rem;
+    }
+
+    .IntroLargeButtons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        gap: 12px;
+    }
+
+    .IntroSocials img {
+        width: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .IntroDivRight img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .IntroDivLeft h1 {
+        font-size: 1.5rem;
+    }
+
+    .IntroDivLeft h2 {
+        font-size: 1.1rem;
+    }
+}

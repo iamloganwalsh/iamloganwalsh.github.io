@@ -34,3 +34,14 @@ a:hover {
   color: #535bf2;
 }
 
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+  section {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px 40px 20px;
+  }
+}

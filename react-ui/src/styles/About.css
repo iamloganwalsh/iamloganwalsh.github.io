@@ -13,3 +13,34 @@
 #About h2 {
     margin: 0;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+    #About {
+        font-size: 1.1rem;
+        padding: 40px 20px;
+    }
+
+    #About p {
+        width: 90vw;
+        max-width: 500px;
+    }
+
+    #About h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #About {
+        font-size: 1rem;
+    }
+
+    #About h2 {
+        font-size: 1.5rem;
+    }
+}

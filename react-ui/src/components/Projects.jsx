@@ -38,7 +38,7 @@ export const Projects = () => {
 
     // Filler
     const title_two = "Stock/Crypto Trading Simulator"
-    const description_two = "Trading simulator using real market data, cached with Redis"
+    const description_two = "Trading simulator using live market data from Finhubb and Yahoo finance APIs with Redis caching"
 
     return (
         <section id="Projects">
@@ -50,7 +50,7 @@ export const Projects = () => {
                     src: risc_v_demo
                   }}/>
 
-                <ProjectCard project_title={title_two} project_description={description_two} style={{width:"30rem"}}
+                <ProjectCard project_title={title_two} project_description={description_two} style={{width:"35rem"}}
                   media={{
                     type: "video",
                     src: st_demo
