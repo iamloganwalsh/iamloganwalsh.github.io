@@ -1,12 +1,12 @@
 import "../styles/Projects.css"
 // import vm_image from "../assets/vm_electron.png"
 import risc_v_demo from "../assets/risc-v-demo.mp4"
-import filler from "../assets/face.jpg"
+import st_demo from "../assets/st-demo.mp4"
 
-const ProjectCard = ({project_title, project_description, media}) => {
+const ProjectCard = ({project_title, project_description, media, style}) => {
 
     return (
-        <div className="ProjectCard">
+        <div className="ProjectCard" style={style}>
             <div className="PCMediaWrapper">
                 {media.type === "video" ? (
                 <video
@@ -37,8 +37,8 @@ export const Projects = () => {
     const description_one = "RISC-V VM built with the RV32I Base instruction set"
 
     // Filler
-    const title_two = "Filler"
-    const description_two = "Lorem ipsum"
+    const title_two = "Stock/Crypto Trading Simulator"
+    const description_two = "Trading simulator using real market data, cached with Redis"
 
     return (
         <section id="Projects">
@@ -49,12 +49,19 @@ export const Projects = () => {
                     type: "video",
                     src: risc_v_demo
                   }}/>
-                <ProjectCard project_title={title_two} project_description={description_two}   
+
+                <ProjectCard project_title={title_two} project_description={description_two} style={{width:"30rem"}}
+                  media={{
+                    type: "video",
+                    src: st_demo
+                  }}/>
+
+                {/* <ProjectCard project_title={title_two} project_description={description_two}   
                     media={{
                         type: "image",
                         src: filler,
                         alt: "Filler image"
-                    }}/>
+                    }}/> */}
             </div>
             
         </section>
