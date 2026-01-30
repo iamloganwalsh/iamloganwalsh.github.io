@@ -1,7 +1,7 @@
 #Contact {
     display: flex;
     justify-content: center;
-    gap: 8%;
+    gap: 4%;
     flex-wrap: wrap;
     padding: 50px 20px;
     font-family: 'Arial', sans-serif;
@@ -47,7 +47,7 @@
     background-color: rgb(54,54,54);
     padding: 20px;
     color: white;
-    width: 40%;
+    width: 30%;
 }
 
 .ContactRight p {
@@ -136,9 +136,9 @@
 }
 
 #FormNameEmailName {
-    width: 30%
+    width: 40%
 }
 
 #FormNameEmailEmail {
-    width: 65%
+    width: 55%
 }

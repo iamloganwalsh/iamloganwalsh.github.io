@@ -19,7 +19,6 @@ html, body {
 }
 
 section {
-  scroll-margin-top: 12.5rem;
   height: 100vh;
   display: flex;
   justify-content: center;
