@@ -1,8 +1,17 @@
+"use client";
+import { useState } from "react";
+import Terminal from "./components/Terminal";
+import Desktop from "./components/Desktop";
+// import Navbar from "./components/Navbar";
+// import DynamicContent from "./components/DynamicContent";
+
 export default function Home() {
+  const [section, setSection] = useState("about");
+
   return (
-    <main>
-      <h1>Hello!</h1>
-      <p>This website is currently under construction. Check back in a few days!</p>
+    <main className="grid grid-cols-2 h-screen">
+      <Terminal />
+      <Desktop />
     </main>
-  )
+  );
 }
