@@ -71,7 +71,7 @@ about                       Prints a short introduction about myself
 projects                    View a list of projects
 projects {project_id}       View information about a specific project [1 - 5]
 work                        View a list of previous work experiences
-work {experience_id}        View information about a specific work experience
+work {experience_id}        View information about a specific work experience [1 - 5]
 get                         Download my resume!
 clear                       Clear terminal
 `;
@@ -127,7 +127,9 @@ Outside of work, I enjoy exploring low-level programming, cybersecurity, and har
                             return `Worked directly with clients, owning projects end to end. Work involved consulting with clients, figuring out their pain points and migrating their existing solutions into new software that better suits their needs.`
                         case "5":
                             return `I was a member of bar staff at a local tasting studio for just over 4 years, interacting with customers and serving drinks and food within a collaborative and friendly team.`
-                    }
+                        default:
+                            return `Please enter a valid id (1 - 5)`
+                        }
                 }
 
             case "clear":
@@ -140,6 +142,13 @@ Or click a file on the desktop →`
                     }
                 ]);
                 return 0;
+
+            case "get":
+                const link = document.createElement('a');
+                link.href = "/LoganWalshResume.pdf";
+                link.download = "LoganWalshResume.pdf";
+                link.click();
+                return `Download started.`;
 
             default:
                 return "ERR: Command not recognised.";
