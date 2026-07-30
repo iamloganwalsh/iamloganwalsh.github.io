@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState, type MouseEvent } from "react";
 
 const FILES = [
@@ -16,6 +17,49 @@ const SKILLS = [
     ["DATA", "PostgreSQL", "Redis", "SQLite"],
     ["INFRA", "Docker", "AWS", "Vercel"]
 ];
+
+const PROJECTS = {
+    swe: [
+        {
+            title: "Stock Analysis Platform",
+            image: "/window.svg",
+            description: "Working alongside my good friend Ken1o, we developed an analytical platform to look at stock trends, collect trending news, generate AI reports, and are looking at introducing ML algorithms to predict future changes.",
+            repoUrl: "https://github.com/Ken1o/stock_analysis_platform",
+        },
+        {
+            title: "RISC-V Emulator",
+            image: "/globe.svg",
+            description: "I developed a RISC-V emulator coded in raw C based on the RV32I instruction set. I implemented full memory management, custom dynamic allocation with heap banks, and memory-mapped I/O virtual routines.",
+            repoUrl: "https://github.com/iamloganwalsh/risc-v-emulator",
+        },
+        {
+            title: "Encrypted Password Vault & Manager",
+            image: "/globe.svg",
+            description: "A Rust-based password manager which utilises Argon2 for key derivation and ChaCha20-Poly1035 for secure, authenticated encryption.",
+            repoUrl: "https://github.com/iamloganwalsh/password_manager",
+        },
+        {
+            title: "Low-Latency Order Matching Engine",
+            image: "/globe.svg",
+            description: "An order matching engine implemented in Rust with a focus on optimisied performance. Utilises BTree and Hash maps to achieve nano-second processing, with performance benchmarked using the Criterion framework.",
+            repoUrl: "https://github.com/iamloganwalsh/rustex",
+        },
+        {
+            title: "In-Memory Cache Engine",
+            image: "/globe.svg",
+            description: "An in-memory key-value store using modern C++23, with CLI functionality. Implemented time to live (TTL), persistence, logging, and multi cache support.",
+            repoUrl: "https://github.com/iamloganwalsh/cpp_cache",
+        },
+    ],
+    cyber: [
+        {
+            title: "ESP32-S BadUSB",
+            image: "/next.svg",
+            description: "WIP",
+            repoUrl: "https://github.com/iamloganwalsh/404",
+        },
+    ],
+};
 
 const SKILL_PROFICIENCIES: Record<string, number> = {
     "Python": 9,
@@ -40,6 +84,7 @@ type WindowOptions = "about" | "projects" | "skills" | "contact";
 
 export default function Desktop () {
     const [activeWindow, setActiveWindow] = useState<WindowOptions | null>(null);
+    const [activeProjectTab, setActiveProjectTab] = useState<"swe" | "cyber">("swe");
 
     const openWindow = (windowName: WindowOptions) => {
         setActiveWindow(windowName);
@@ -136,7 +181,7 @@ export default function Desktop () {
                     className="absolute inset-0 z-20 flex items-center justify-center bg-black/70 p-2"
                     onClick={handleOverlayClick}
                 >
-                    <div className="w-full max-w-md overflow-hidden rounded-md border border-[#2a3a1f]/70 bg-[#0c0c0c] shadow-lg">
+                    <div className="w-full max-w-2xl overflow-hidden rounded-md border border-[#2a3a1f]/70 bg-[#0c0c0c] shadow-lg">
                         <div className="flex h-6 items-center justify-between border-b border-[#2a3a1f]/70 px-2">
                             <span>{activeWindow}.txt</span>
 
@@ -160,9 +205,54 @@ export default function Desktop () {
                             )}
 
                             {activeWindow === "projects" && (
-                                <p>
-                                    My projects...
-                                </p>
+                                <div className="space-y-3">
+                                    <div className="flex gap-2">
+                                        <button
+                                            onClick={() => setActiveProjectTab("swe")}
+                                            className={`cursor-pointer rounded border px-3 py-1 text-xs uppercase tracking-[0.3em] transition ${activeProjectTab === "swe"
+                                                ? "border-lime-400 bg-lime-500/15 text-lime-300"
+                                                : "border-white/10 bg-black/40 text-zinc-400 hover:text-zinc-200"
+                                            }`}
+                                        >
+                                            SWE
+                                        </button>
+                                        <button
+                                            onClick={() => setActiveProjectTab("cyber")}
+                                            className={`cursor-pointer rounded border px-3 py-1 text-xs uppercase tracking-[0.3em] transition ${activeProjectTab === "cyber"
+                                                ? "border-lime-400 bg-lime-500/15 text-lime-300"
+                                                : "border-white/10 bg-black/40 text-zinc-400 hover:text-zinc-200"
+                                            }`}
+                                        >
+                                            Cyber / Hardware
+                                        </button>
+                                    </div>
+
+                                    <div className="max-h-[320px] space-y-3 overflow-y-auto pr-1 no-scrollbar">
+                                        {PROJECTS[activeProjectTab].map((project) => (
+                                            <div key={project.title} className="flex flex-col gap-2 rounded border border-white/10 bg-black/40 p-3 sm:flex-row sm:items-center">
+                                                <Image
+                                                    src={project.image}
+                                                    alt={`${project.title} preview`}
+                                                    width={64}
+                                                    height={64}
+                                                    className="h-16 w-16 rounded border border-lime-500/20 bg-zinc-900 object-contain p-2"
+                                                />
+                                                <div className="flex-1">
+                                                    <div className="text-sm font-semibold text-zinc-100">{project.title}</div>
+                                                    <p className="mt-1 text-xs text-zinc-400">{project.description}</p>
+                                                    <a
+                                                        href={project.repoUrl}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="mt-2 inline-block text-[11px] text-lime-400 underline-offset-2 hover:underline"
+                                                    >
+                                                        View repo →
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             )}
 
                             {activeWindow === "skills" && (
@@ -186,9 +276,63 @@ export default function Desktop () {
                             )}
 
                             {activeWindow === "contact" && (
-                                <p>
-                                    Contact me...
-                                </p>
+                                <div className="space-y-4 text-sm text-zinc-300">
+                                    <div className="rounded border border-white/10 bg-black/40 p-3">
+                                        <div className="mb-2 text-[10px] uppercase tracking-[0.3em] text-lime-300">
+                                            Contact
+                                        </div>
+                                        <div className="space-y-2">
+                                            <div>
+                                                <div className="mb-1 text-xs text-zinc-500">LinkedIn</div>
+                                                <div className="rounded border border-white/10 bg-zinc-950/70 px-2 py-1 text-zinc-200">
+                                                    <a
+                                                        href={"https://www.linkedin.com/in/logwalsh/"}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="mt-2 inline-block text-[11px] text-lime-400 underline-offset-2 hover:underline"
+                                                    >
+                                                        linkedin.com/in/logwalsh/
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="mb-1 text-xs text-zinc-500">GitHub</div>
+                                                <div className="rounded border border-white/10 bg-zinc-950/70 px-2 py-1 text-zinc-200">
+                                                    <a
+                                                        href={"https://github.com/iamloganwalsh"}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="mt-2 inline-block text-[11px] text-lime-400 underline-offset-2 hover:underline"
+                                                    >
+                                                        github.com/iamloganwalsh
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="mb-1 text-xs text-zinc-500">Email</div>
+                                                <div className="rounded border border-white/10 bg-zinc-950/70 px-2 py-1 text-zinc-200">
+                                                    <a
+                                                        href={"mailto:cyberdev3@proton.me"}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="mt-2 inline-block text-[11px] text-lime-400 underline-offset-2 hover:underline"
+                                                    >
+                                                        cyberdev3@proton.me
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded border border-white/10 bg-black/40 p-3">
+                                        <div className="mb-2 text-[10px] uppercase tracking-[0.3em] text-lime-300">
+                                            Interests
+                                        </div>
+                                        <p className="text-zinc-400">
+                                            I have a broad range of technical interests, being software engineering, cybersecurity, embedded hardware, low-level development, and systems programming. Feel free to reach out with any questions or enquiries!
+                                        </p>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     </div>
