@@ -53,9 +53,9 @@ const PROJECTS = {
     ],
     cyber: [
         {
-            title: "ESP32-S BadUSB",
+            title: "ESP32-S3 BadUSB",
             image: "/next.svg",
-            description: "WIP",
+            description: "Developed prank payloads such as RickRoll for an ESP32-S3. The delivered payload depends on which input pin is triggered.",
             repoUrl: "https://github.com/iamloganwalsh/404",
         },
     ],
